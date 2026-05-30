@@ -1,0 +1,2 @@
+ali_faol, ali@mail.com, True
+vali_nofaol, vali@mail.com, False
