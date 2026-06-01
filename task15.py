@@ -1,11 +1,11 @@
 class Phone:
     def __init__(self, brand, model):
         self.brand = brand
-        self.model = model  
+        self.model = model
 
     def show_info(self):
-        print(self.brand, self.model)
+        print(f"Phone: {self.brand} {self.model}")
 
-p01 = Phone("Samsung", "Galaxy S21")
+phone = Phone("Samsung", "Galaxy S26")
 
-p01.show_info()
+phone.show_info()

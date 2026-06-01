@@ -4,13 +4,12 @@ name = input("Ismingiz: ")
 age = int(input("Yoshingiz: "))
 yangi_user = {"name": name, "age": age}
 
-fayl = "data.json"
-
-f = open(fayl, "r")
-user = json.load(f)
 user = []
+
+f = open("data.json")
+user = json.load(f)
 
 user.append(yangi_user)
 
-f = open(fayl, "w")
-json.dump(user, f, indent=4)
+f = open("data.json", "w")
+json.dump(user, f)

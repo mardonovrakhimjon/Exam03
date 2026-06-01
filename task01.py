@@ -1,5 +1,5 @@
-name = input("Ismingiz: ")
-age = input("Yoshingiz: ")
+name = input("Your name: ")
+age = input("Your age: ")
 
-with open("data.txt", "a") as f:
-    f.write(f"{name} - {age} yosh\n")
+f = open("data.txt", "a")
+f.write(f"{name} - {age} yosh\n")

@@ -1,22 +1,23 @@
 class Person:
     def __init__(self, name, age):
         self.name = name
-        self.age = age
+        self.age  = age
 
     def introduce(self):
-        return f"Salom, mening ismim {self.name}. Yoshim {self.age} da."
+        return f"Mening ismim {self.name}, yoshim {self.age}da"
 
-class Student:
+
+class Student(Person):
     def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age
-        self.grade = grade
+        super().__init__(name, age)
+        self.grade= grade
 
     def introduce(self):
-        return f"Salom, mening ismim {self.name}. Yoshim {self.age} da. Men {self.grade}-sinfda o'qiyman. "
+        return f"Mening ismim {self.name}, yoshim {self.age}da va men {self.grade}-kursman"
 
-person1 = Person("Ali", 30)
-print(person1.introduce())
 
-student1 = Student("Vali", 15, 9)
-print(student1.introduce())
+inson1 = Person("Anna", 16)
+inson2 = Student("Alina", 19, 1)
+
+print(inson1.introduce())
+print(inson2.introduce())

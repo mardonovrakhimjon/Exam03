@@ -1,10 +1,7 @@
 import json
 
-
-fayl = "data.json"
-
-f = open('data.json', 'r')
+f = open("data.json")
 users = json.load(f)
 
-for user in users:
+for user in users: 
     print(f"Name: {user['name']}, Age: {user['age']}")

@@ -1,16 +1,12 @@
 import json
 
-yangi_user = {"name": "Ali", "age": 15}
-fayl = "data.json"
 
-f = open(fayl, "r")
-user_list = json.load(f)
-f.close()
+y_user = {"name": "asad", "age": 12}
 
-user_list.append(yangi_user)
+f = open("data.json")
+users = json.load(f)
 
-f = open(fayl, "w")
-json.dump(user_list, f, indent=4)
-f.close()
+users.append(y_user)
 
-print("Foydalanuvchi JSON faylga qo‘shildi!")
+f = open("data.json", "w")
+json.dump(users, f)

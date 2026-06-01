@@ -1,10 +1,13 @@
 class Rectangle:
     def __init__(self, width, height):
-        self.width = width
+        self.width  = width
         self.height = height
 
-obyekt01 = Rectangle(3, 5)
-def area():
-    print(f"obyekt01 ning areasi {obyekt01.width * obyekt01.height}")
+    def area(self):
+        return self.width*self.height
 
-area()
+turtburchak1 = Rectangle(13, 6)
+turtburchak2 = Rectangle(9, 4)
+
+print(turtburchak1.area())
+print(turtburchak2.area())

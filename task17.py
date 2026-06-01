@@ -1,27 +1,19 @@
 class User:
-    def __init__(self, username, email, is_active):
+    def __init__(self, username, email, is_active=True):
         self.username = username
         self.email = email
-        self.is_active = is_active
-
-    def save(self):
-        file = open("users.txt", "a")
-        file.write(f"{self.username}, {self.email}, {self.is_active}\n")
-        file.close()
+        self.is_active= is_active
 
     def deactivate(self):
         self.is_active = False
+        
+    def save(self):
+        f = open("users.txt", "a")
+        qator = f"{self.username}, {self.email}, {self.is_active}\n"
+        f.write(qator)
 
-def fayldan_oqish():
-    file = open("users.txt", "r")
-    print(file.read())
-    file.close()
-
-user1 = User("ali_faol", "ali@mail.com", True)
-user2 = User("vali_nofaol", "vali@mail.com", False)
-
+user1 = User("ali", "ali@mail.com", True)
 user1.save()
+user2 = User("alisa", "alia@mail.com")
+user2.deactivate()
 user2.save()
-
-print("Fayldagi ma'lumotlar:")
-fayldan_oqish()

@@ -5,22 +5,22 @@ class Shape:
 class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
-        self.height = height
+        self.height= height
 
     def area(self):
-        return self.width * self.height
+        return self.width*self.height
 
 class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        return 3.14 * self.radius ** 2
+        return 3.14*self.radius**2
 
 shakllar = [
-    Rectangle(12, 5),
-    Circle(4)
+    Rectangle(12, 3),
+    Circle(5)
 ]
 
 for shakl in shakllar:
-    print(f"Yuzasi: {shakl.area()}")
+    print(shakl.area())

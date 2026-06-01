@@ -1,12 +1,15 @@
 class Bird:
     def speak(self):
-        return "Qag'-qag'"
+        return "Chirq Chirq"
 
-class Dog:
+
+class Dog(Bird):
     def speak(self):
-        return "Vaf-vaf"
+        return "Woof Woof"
 
-birds_dogs = [Bird(), Dog()]
+hayvonlar = [
+    Bird(), Dog()
+]
 
-for b_d in birds_dogs:
-    print(b_d.speak())
+for hayvon in hayvonlar:
+    print(hayvon.speak())

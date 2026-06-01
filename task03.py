@@ -1,4 +1,3 @@
-
-f = open("data.txt")
-qator = f.readlines()
-print(f"Faylda jami {len(qator)} ta foydalanuvchi bor:\n")
+f = open("data.txt", "r")
+qatorlar = f.readlines()
+print(f"data.txt faylida {len(qatorlar)}  ta foydalanuvchi mavjud")

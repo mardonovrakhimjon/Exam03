@@ -1,4 +1,4 @@
+f = open("data.txt", "r")
 
-f = open('data.txt', 'r')
-for lene in f:
-    print(lene.strip())
+for qator in f:
+    print(qator.strip())

@@ -1,30 +1,19 @@
 class BankAccount:
-    def __init__(self, owner, balance=0.0):
-        self.owner = owner
+    def __init__(self, owner, balance):
+        self.owner   = owner
         self.balance = balance
 
     def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"{amount} so'm qo'shildi. Joriy balans: {self.balance} so'm")
-        else:
-            print("Xato: Qo'shilayotgan summa noldan katta bo'lishi kerak!")
+        self.balance += amount
 
     def withdraw(self, amount):
         if amount > self.balance:
-            print("Balans yetarli emas")
-        elif amount <= 0:
-            print("Xato: Yechilayotgan summa noldan katta bo'lishi kerak!")
+            return("Balans yetarli emas")
         else:
             self.balance -= amount
-            print(f"{amount} so'm yechildi. Joriy balans: {self.balance} so'm")
 
+hisob = BankAccount("ali", 50000)
+hisob.deposit(200000)
 
-
-hisob = BankAccount("Ali", 50000)
-
-hisob.deposit(20000)
-
-hisob.withdraw(40000)
-
-hisob.withdraw(100000)
+print(hisob.withdraw(30000))
+print(hisob.balance)
